@@ -1,4 +1,4 @@
-.sass-cache/*
-scss
+.sass-cache/
+scss/
 css/app.css.map
-webfonts
+webfonts/

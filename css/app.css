@@ -46,7 +46,8 @@ img {
       left: 60px;
       width: max-content;
       font-size: 14px;
-      color: #a9a9a9; }
+      color: #a9a9a9;
+      font-weight: bold; }
 
 .container {
   display: flex;

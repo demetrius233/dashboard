@@ -1,0 +1,18 @@
+.navegacion{
+    @include respond-to("max-width: 576px"){
+        top: 60px; 
+        width: 300px;
+        left: -300px;
+    }
+
+    &.show-sidebar{
+        left: 0;
+    }
+}
+
+body .container .barra{
+    @include respond-to("max-width: 576px"){
+        width: 100%;
+    }
+  
+}

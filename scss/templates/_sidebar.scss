@@ -1,0 +1,50 @@
+.navegacion{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #233c54;
+    transition: .3s;
+
+   
+
+    .logo{
+        text-align: center;
+    }
+
+    li{
+        position: relative;
+        
+
+        a{
+            display: block;
+            &:hover{
+                background-color: #184c7d;
+            }
+        }
+
+        span{ 
+            display: inline-block;
+            color: white;
+            line-height: 60px;
+            height: 60px;
+        }
+        span:nth-child(1){
+            text-align: center;
+            width: 60px;
+        }
+        span:nth-child(2){
+            position: absolute;
+            left: 60px;
+            width: max-content;
+            font-size: 14px;
+            color: #a9a9a9;
+        }
+
+    }
+
+
+    
+}

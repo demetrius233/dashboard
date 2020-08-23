@@ -1,0 +1,9 @@
+body.sidebar-open{
+    .navegacion{
+        width: 300px;
+    }
+
+    .barra{
+        width: calc(100% - 300px);
+    }
+}

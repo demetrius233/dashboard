@@ -1,0 +1,15 @@
+// VARIABLES DE APILAMIENTO
+:root{
+    --z-back : -10;
+    --z-normal: 1 ;
+    --z-modal: 10;
+    --z-fixed: 100;
+    --z-tooltip: 1000;
+}
+
+$breakpoints: (
+    b-sm : 576px,
+    b-md : 768px,
+    b-lg : 992px,
+    b-xl : 1200px
+);

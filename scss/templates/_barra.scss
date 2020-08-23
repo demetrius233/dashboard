@@ -1,0 +1,202 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+
+    .barra{
+        height: 60px;
+        width: calc(100% - 60px);
+        background-color: #fbfbfb;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
+        box-shadow: 0 -4px 6px 1px #163461;
+        transition: .3s;
+    }
+}
+.barra{
+    ul{
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        list-style: none;
+        position: relative;
+        padding: .45rem 0;
+    }
+    .menu-toggle{
+        padding: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .enlaces-barra{
+        justify-self: end; 
+        display: flex;
+        align-items: center;
+
+        a{
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            color: #5b5f5d;
+            padding: 0 .35rem; 
+        }
+
+        .banderas{
+            
+
+            img{ width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+
+        .notificaciones, .mensajes{ 
+
+            &::before{
+                content: "6";
+                width: 17px;
+                height: 17px;
+                background-color: #d87362;
+                font-size: 13px;
+                color: white;
+                text-align: center;
+                line-height: 17px;
+                position: absolute;
+                top: -1px;
+                right: 8px;
+                border-radius: 50%;
+            }
+        }
+
+        .mensajes::before{
+            content: "3";
+        }
+        .usuario{
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background-color: #dad7d7;
+            border-radius: 50%;
+
+            &::before{
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: seagreen;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 5px;
+                right: 3px;
+                border: 2px solid white;
+            }
+        }
+    }
+}
+
+.enlaces-barra .banderas-dropdown {
+    position: absolute;
+    top: 100%;
+    border: 2px solid rgba(#000000, .1);
+    border-radius: 4px;
+    width: 200px;
+    right: 0;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1,0);
+    transition: .3s cubic-bezier(1, -0.01, 0.7, 1.51);
+    transform-origin: center top;
+    will-change: transform;
+
+    &.open{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 0;
+        padding: .5rem;
+        &:hover{
+            background-color: rgba(#928d8d, .2);
+        }
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}
+
+
+.notificaciones-dropdown{
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    right: 0;
+    border: 2px solid rgba(#000000, .1);
+    border-radius: 4px;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1, 0);
+    transition: .3s cubic-bezier(1, -0.01, 0.7, 1.51);
+    transform-origin: center top;
+    
+
+    &.open{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+
+
+    h4{
+        text-transform: uppercase; 
+        border-bottom: 1px solid rgba(#000000, .1);
+        padding: .5rem;
+    }
+
+    a.mensajes-noti{
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        text-decoration: none;
+        border-top: 1px solid rgba(#000000, .1);
+        margin: 0;
+
+        &:hover{
+            background-color: rgba(#5a4e4e, .1);
+        }
+    }
+
+    span{
+        padding: .5em;
+    }
+
+    div{
+        padding: .5em;
+
+        h3{
+            text-transform: uppercase;
+            color: #908cc5;
+            font-weight: normal;
+            font-size: .9em;
+        }
+        p{
+            font-size: 14px;
+            color: #c9c9bf;
+        }
+        small{
+            font-size: 12px;
+            color: #9c9c9a;
+        }
+    }
+}
